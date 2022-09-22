@@ -2,25 +2,26 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:teacherday/screens/dash/provider/dashProvider.dart';
-import 'package:teacherday/screens/dash/view/dashScreen.dart';
-import 'package:teacherday/screens/home/provider/homeProvider.dart';
 import 'package:teacherday/screens/home/view/homeScreen.dart';
-import 'package:teacherday/screens/home/view/homeScreenIos.dart';
-
+import 'package:teacherday/screens/home/view/spleshScreen.dart';
+import 'package:teacherday/screens/loginRegister/provider/loginRegister.dart';
+import 'package:teacherday/screens/loginRegister/view/loginScreen.dart';
+import 'package:teacherday/screens/loginRegister/view/registerScreen.dart';
 void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => HomeProvider()),
-        ChangeNotifierProvider(create: (context) => DashProvider()),
+        ChangeNotifierProvider(create: (context)=>RegisterLoginProvider()),
+        ChangeNotifierProvider(create: (context)=>RegisterLoginProvider())
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: "dash",
+        initialRoute: "data",
         routes: {
-          '/': (context) => Homescreen(),
-          'dash': (context) => DashScreen(),
+          '/': (context) => SpleshScreen(),
+          'login': (context) => LoginScreen(),
+          'signUp': (context) => RegisterScreen(),
+          'home': (context) => HomeScreen(),
         },
       ),
     ),
