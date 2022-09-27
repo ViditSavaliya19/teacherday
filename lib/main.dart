@@ -7,18 +7,20 @@ import 'package:teacherday/screens/home/view/spleshScreen.dart';
 import 'package:teacherday/screens/loginRegister/provider/loginRegister.dart';
 import 'package:teacherday/screens/loginRegister/view/loginScreen.dart';
 import 'package:teacherday/screens/loginRegister/view/registerScreen.dart';
+import 'package:teacherday/screens/userScreen/userDataScreen.dart';
+import 'package:teacherday/screens/userScreen/userProvider.dart';
 void main() {
   runApp(
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context)=>RegisterLoginProvider()),
-        ChangeNotifierProvider(create: (context)=>RegisterLoginProvider())
+        ChangeNotifierProvider(create: (context)=>UserProvider())
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: "data",
+        initialRoute: "/",
         routes: {
-          '/': (context) => SpleshScreen(),
+          '/': (context) => UserDataScreen(),
           'login': (context) => LoginScreen(),
           'signUp': (context) => RegisterScreen(),
           'home': (context) => HomeScreen(),
