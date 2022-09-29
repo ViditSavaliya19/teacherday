@@ -41,6 +41,8 @@ dependencies:
   carousel_slider: ^4.1.1
   dots_indicator: ^2.1.0
   shared_preferences: ^2.0.15
+  webview_flutter: ^3.0.4
+  flutter_inappwebview: ^5.4.3+7
 
 dev_dependencies:
   flutter_test:

@@ -1,10 +1,8 @@
 import 'dart:convert';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:teacherday/screens/userScreen/PostModel.dart';
 import 'package:teacherday/screens/userScreen/ProductModel.dart';
-import 'package:teacherday/screens/userScreen/UserModel.dart';
 
 class UserProvider extends ChangeNotifier {
   List jsonList = [];

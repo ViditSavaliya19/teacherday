@@ -32,12 +32,12 @@ class _UserDataScreenState extends State<UserDataScreen> {
               onPressed: () {
                 userProviderFalse!.filterPrice();
               },
-              icon: Icon(Icons.filter_list_alt),
+              icon: const Icon(Icons.filter_list_alt),
             ),IconButton(
               onPressed: () {
                 userProviderFalse!.getProduct();
               },
-              icon: Icon(Icons.filter_list_alt),
+              icon: const Icon(Icons.filter_list_alt),
             ),
           ],
         ),
